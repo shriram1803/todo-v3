@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const uri = "mongodb+srv://shriram_r__:Test123@cluster0.e4gsd9p.mongodb.net/todoDB";
+const uri = "mongodb+srv://shriram_r__:<PASSWORD>@cluster0.e4gsd9p.mongodb.net/todoDB";
 
 mongoose.connect(uri);
 
