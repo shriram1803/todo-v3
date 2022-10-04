@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const uri = "mongodb+srv://shriram_r__:<PASSWORD>@cluster0.e4gsd9p.mongodb.net/todoDB";
+const uri = `mongodb+srv://shriram_r__:${process.env.MONGO_PASSWORD}@cluster0.e4gsd9p.mongodb.net/todoDB`;
 
 mongoose.connect(uri);
 
