@@ -99,7 +99,4 @@ footer {
   .container {
       width: 100%;
   }
-  .container, h1 {
-    color:aqua
-  }
 }
